@@ -1,0 +1,10 @@
+---
+name: Kill LogiOptions+ client process
+command: "kill -9 $(ps aux | grep "MacOS/logioptionsplus_agent" | grep -v grep | awk '{print $2}')
+tags:
+ - kill
+ - logioptions
+description: "Kills the LogiOptions+ client process and then gets started automatically. The LogiOptions+ process fails to 
+work after the laptop goes on sleep or idle. Happens on multiple CPU architectures, operating systems, and laptop models. 
+This is not something related to the hardware but a software problem."
+author: Adrian Oprea
